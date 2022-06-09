@@ -1,0 +1,21 @@
+Traceback (most recent call last):
+  File "main.py", line 318, in <module>
+    main()
+  File "main.py", line 58, in main
+    torch.multiprocessing.spawn(main_worker, (args,), args.ngpus_per_node)
+  File "/ext3/miniconda3/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 199, in spawn
+    return start_processes(fn, args, nprocs, join, daemon, start_method='spawn')
+  File "/ext3/miniconda3/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 157, in start_processes
+    while not context.join():
+  File "/ext3/miniconda3/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 118, in join
+    raise Exception(msg)
+Exception: 
+
+-- Process 1 terminated with the following error:
+Traceback (most recent call last):
+  File "/ext3/miniconda3/lib/python3.8/site-packages/torch/multiprocessing/spawn.py", line 19, in _wrap
+    fn(i, *args)
+  File "/scratch/hrr288/DL-final/Obj_SSL_barlow/main.py", line 113, in main_worker
+    for step, ((y1, y2), _) in enumerate(loader, start=epoch * len(loader)):
+ValueError: too many values to unpack (expected 2)
+

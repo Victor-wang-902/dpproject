@@ -1,0 +1,6 @@
+usage: main.py [-h] [--workers N] [--epochs N] [--batch-size N]
+               [--learning-rate-weights LR] [--learning-rate-biases LR]
+               [--weight-decay W] [--lambd L] [--projector MLP]
+               [--print-freq N] [--checkpoint-dir DIR]
+               DIR
+main.py: error: the following arguments are required: DIR
